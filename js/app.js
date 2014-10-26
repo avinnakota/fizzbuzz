@@ -1,28 +1,30 @@
 $(document).ready(function(){
-
-    for (i = 1; i <= 100; i++)
+function input = function(limit)
 {
-    if (i % 5 == 0 && i % 3 == 0)
+    limit = prompt("Please enter a number: ","0");
+
+    for (var i = 1; i <= parseInt(limit); i++)
     {
-        var name = $("<p>fizzbuzz</p>");
-        $("#game").append(name);
-    }
+        if (i % 5 == 0 && i % 3 == 0)
+        {
+            $("#game").append("<p>fizzbuzz</p>");
+         }
     
-    else if (i % 3 == 0)
-    { 
-         var name = $("<p>fizz</p>");
-         $("#game").append(name);
-    }
+         else if (i % 3 == 0)
+        { 
+            $("#game").append("<p>fizz</p>");
+        }   
     
-    else if (i % 5 == 0)
-    {
-        var name = $("<p>fizz</p>");
-         $("#game").append(name);
-    }
+        else if (i % 5 == 0)
+        {
+             $("#game").append("<p>fizz</p>");
+        }
     
-    else
-    {
-        $("#game").append("<p>" + i + "</p>");
+        else
+        {
+            $("#game").append("<p>" + i + "</p>");
+        }   
     }
 }
+ input();
 });
